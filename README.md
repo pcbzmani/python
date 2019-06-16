@@ -62,3 +62,47 @@ print(price)
 #price10 = list(filter(lambda item: item[1] >= 10, items))
 price10 = [item for item in items if item[1] >= 10]
 print(price10)
+
+#Exception
+try:
+    age = int(input("Enter the Age: "))
+except ValueError as ex:
+    print("Please enter a valid age")
+    print(ex)
+    print(type(ex))
+else:
+    print(f"Age is valid {age} ")
+
+
+# Class is a blueprint of object
+# Object is an instance of class
+
+# Ex: Class - Human, Object - John, Mani
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+    def __gt__(self, other):
+        return self.x > other.x and self.y > other.y
+
+    @classmethod
+    def zero(cls):
+        cls(0, 0)
+
+    def draw(self):
+        print(f"Point ({self.x},{self.y})")
+
+
+point = Point(1, 50)
+other = Point(1, 50)
+another = Point(0, 25)
+print(point == other)
+print(point > another)
+print(Point.zero())
+point.draw()
