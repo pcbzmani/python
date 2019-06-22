@@ -140,7 +140,8 @@ print(john.weight)
 # All class inherit from 'object class'
 print(isinstance(john, Human))
 print(issubclass(Female, Human))
-#CSV
+
+# CSV
 import csv
 
 with open(r"H:\Python VS\custs_states.csv", "w") as file:
