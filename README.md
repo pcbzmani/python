@@ -150,3 +150,16 @@ with open(r"H:\Python VS\custs_states.csv", "w") as file:
     write.writerow(["TN", "Tamil_nadu"])
     write.writerow(["TX", "Texas"])
 
+# JSON
+
+import json
+from pathlib import Path
+
+movies = [
+    {"id": 1, "Title": "NGK", "Year": 2019},
+    {"id": 2, "Title": "NNOR", "Year": 2019},
+]
+
+data = json.dumps(movies)
+
+Path("movies.json").write_text(data)
