@@ -140,3 +140,12 @@ print(john.weight)
 # All class inherit from 'object class'
 print(isinstance(john, Human))
 print(issubclass(Female, Human))
+#CSV
+import csv
+
+with open(r"H:\Python VS\custs_states.csv", "w") as file:
+    write = csv.writer(file)
+    write.writerow(["State_cd", "State_name"])
+    write.writerow(["TN", "Tamil_nadu"])
+    write.writerow(["TX", "Texas"])
+
