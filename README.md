@@ -163,3 +163,31 @@ movies = [
 data = json.dumps(movies)
 
 Path("movies.json").write_text(data)
+
+
+
+
+
+# Datetime
+import string
+import random
+from datetime import datetime, timedelta
+
+dt1 = datetime(2018, 9, 1)
+dt2 = datetime.now()
+
+
+duration = dt2 - dt1
+print(duration)
+
+print("days", duration.days)
+print("sec", duration.seconds)
+print("total_sec", duration.total_seconds())
+
+
+# temp pwd generation
+
+let = string.ascii_letters
+dig = string.digits
+
+print("".join(random.choices(let + dig, k=6)))
