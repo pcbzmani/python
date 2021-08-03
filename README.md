@@ -1,6 +1,6 @@
 # python
 Python Basics
-# Variables
+
 
 # String
 py_string = "Hello World"
@@ -50,3 +50,4 @@ print(john.weight)
 # All class inherit from 'object class'
 print(isinstance(john, Human))
 print(issubclass(Female, Human))
+
